@@ -34,21 +34,26 @@ LGTMなら適用する
 bundle exec ridgepole -c config/database.yml -E development -f db/Schemafile --apply
 ```
 
-TEST　の兼ね合いもあるので、schema.rbを作成する(本当に必要だろうか。。)
+TEST　の兼ね合いもあるので、schema.rbを作成する
 
 ```
 # schema.rbを作る
 rake db:schema:dump
+```
 
+ちなみに直接test用DBを作成する場合はこちら
+```
 # test用のDBに直接適用
 bundle exec ridgepole -c config/database.yml -E test -f db/Schemafile --apply
 ```
 
-### Herokuに設定
+### HerokuのDBに適用する
 
 ```
-heroku run bundle exec ridgepole -c config/database.for.heroku.ridgepole.yml -E production -f db/Schemafile --apply -a yos-ridgepole-sample
+heroku run 'bundle exec ridgepole -c config/database.for.heroku.ridgepole.yml -E production -f db/Schemafile --apply' --app yos-ridgepole-sample
 ```
+
+postico にて生成されていることを確認。
 
 ## 参考サイト
 
