@@ -7,6 +7,7 @@ ridgepoleをherokuで動かすサンプルです。
 - Ruby 2.2.3
 - Rails 4.2.3
 - Ridgepole 0.6.2
+- PostgreSQL 9.4.4
 
 ### Setup
 
