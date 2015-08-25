@@ -2,6 +2,11 @@
 
 ridgepoleをherokuで動かすサンプルです。
 
+
+Qiitaの記事はこちらです。 
+
+http://qiita.com/yoshioota/items/de6edcecf94614c2f84f
+
 ### versions
 
 - Ruby 2.2.3
