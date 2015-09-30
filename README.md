@@ -1,15 +1,24 @@
 ## README
 
-* Ruby version
+ridgepoleをherokuで動かすサンプルです。
+
+
+Qiitaの記事はこちらです。 
+
+http://qiita.com/yoshioota/items/de6edcecf94614c2f84f
+
+### versions
 
 - Ruby 2.2.3
 - Rails 4.2.3
 - Ridgepole 0.6.2
+- PostgreSQL 9.4.4
 
-* Setup
+### Setup
 
 ```
 cp config/database.example.yml config/database.yml
+rake db:create
 ```
 
 ## 使い方
@@ -18,6 +27,18 @@ cp config/database.example.yml config/database.yml
 
 ```
 bundle exec ridgepole -c config/database.yml -E development --export -o db/Schemafile
+```
+
+### Schemafileを編集する
+
+db/Schemafile
+```
+create_table "articles", force: :cascade do |t|
+  t.string   "title"
+  t.text     "text"
+  t.datetime "created_at"
+  t.datetime "updated_at"
+end
 ```
 
 ### Schemafileの情報をDBに適用する
