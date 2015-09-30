@@ -55,6 +55,10 @@ heroku run 'bundle exec ridgepole -c config/database.for.heroku.ridgepole.yml -E
 
 postico にて生成されていることを確認。
 
+## このサンプルについての記事
+
+http://qiita.com/yoshioota/items/de6edcecf94614c2f84f
+
 ## 参考サイト
 
 https://github.com/winebarrel/ridgepole
